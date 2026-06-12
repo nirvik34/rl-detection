@@ -43,4 +43,4 @@ ax.set_title("RL Agent Inspection Order\n(Green=Object Found, Red=Empty)", fonts
 plt.tight_layout()
 plt.savefig("results/attention_map.png", dpi=150)
 plt.show()
-print("✅ Saved to results/attention_map.png")
+print("Saved to results/attention_map.png")

@@ -6,11 +6,9 @@ import os
 from gymnasium import spaces
 
 class COCOPatchEnv(gym.Env):
-    """
-    RL Environment: Agent selects image patches to inspect.
-    State: CNN features of each patch
-    Action: which patch to inspect next (0-15 for a 4x4 grid)
-    Reward: detection confidence gained - penalty for each step
+    """Environment for patch-based object detection.
+    
+    Agent selects patches from a grid. Reward is based on finding objects.
     """
     def __init__(self, img_dir, ann_file, grid_size=4, max_steps=8):
         super().__init__()

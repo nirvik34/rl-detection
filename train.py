@@ -12,7 +12,7 @@ eval_env = COCOPatchEnv(IMG_DIR, ANN_FILE)
 
 # Validate environment
 check_env(env)
-print("✅ Environment OK")
+print("Environment OK")
 
 # Train DQN agent
 model = DQN(
@@ -36,7 +36,7 @@ eval_callback = EvalCallback(
     deterministic=True
 )
 
-print("🚀 Training started...")
+print("Training started...")
 model.learn(total_timesteps=50000, callback=eval_callback)
 model.save("models/rl_detector_final")
-print("✅ Training done! Model saved.")
+print("Training complete. Model saved.")
